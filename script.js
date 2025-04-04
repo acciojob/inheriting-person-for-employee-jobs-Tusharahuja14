@@ -14,8 +14,8 @@ function Person(name, age) {
 function Employee(name, age, jobTitle) {
 	constructor(name,age,jobTitle)
 	{
-        super(name, age);
-		this.jobTitle=jobTitle;
+  Person.call(this, name, age); // inherit properties
+  this.jobTitle = jobTitle;
 	}
 	jobGreet()
 	{
